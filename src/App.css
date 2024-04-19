@@ -1,0 +1,686 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.App {
+  text-align: center;
+}
+
+
+
+:root{
+    --blue:#2a2185;
+    --white:#fff; 
+    --grey:#f5f5f5;
+    --black1:#222;
+     --black2:#999;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+svg {
+  vertical-align: middle;
+  margin: 10px;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.navigation{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(109,23,200,1) 35%, rgb(196, 8, 199) 100%);
+  
+    transition: 0.5;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li {
+    position:  relative;
+    width: 100%;
+    list-style: none ;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color: var(--white);
+}
+
+.navigation ul li a {
+ position: relative;
+ display: block;
+ width: 100%;   
+ display: flex;
+ text-decoration: none;
+ color: var(--white);
+}
+.navigation ul li:hover a ,
+.navigation ul li.hovered a {
+    color:rgb(240, 196, 85);
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 13px;
+  line-height: 1;
+}
+.navigation ul li a .title span{
+  padding: 14px 15px;
+}
+
+
+
+.RecentWrapper, .MyWorkWrapper, .AssignedToMeWrapper{
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: -1px -1px 5px 2px #95909026;
+  padding: 15px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.homeWrapper{
+  padding: 24px 0;
+
+}
+.RecentWrapper{
+  text-align: left;
+  color: white;
+}
+
+.issueStatus{
+  font-size: 15px;
+
+}
+/*Project list*/
+
+.menu_projets-area {
+  position: relative;
+  width: 100%;
+  height: 384px;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5;
+
+}
+
+.ProjectsWrapper ul li {
+  position: relative;
+    display: block;
+    padding: 0 10px ;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;    
+    white-space: nowrap;
+    color: #fff;
+    padding-right:50px ;
+  
+}  
+.Projets-item{
+  background-color: var(--blue);
+border-bottom: solid 1px rgba(157, 157, 157, 0.5);
+  color: #FFF;
+cursor: pointer;
+
+position: relative;
+}
+
+.ProjectsWrapper ul li a {
+color: white;
+text-decoration: none;
+}
+.ProjectsWrapper ul li:hover a{
+  background-color: var(--white);
+  }
+/***********/
+
+  /***top bar********/
+
+  .topBarWrapper{
+    padding: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(109,23,200,1) 35%, rgb(196, 8, 199) 100%);    color: rgb(240, 196, 85);
+    font-size: 30px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .userProfile{  
+      background: #a674d0;
+      
+        width: 50px; /* Ajustez la taille selon vos besoins */
+        height: 50px; /* Ajustez la taille selon vos besoins */
+       
+        border-radius: 50%; /* Border radius de 50% pour créer le cercle */
+        overflow: hidden; /* Masque le contenu qui dépasse du cercle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+  }
+
+  .username{
+    font-size: 20px;
+  }
+  .searchBox{
+   border-radius: 40px;
+   background-color: #282828		;
+   color: #ffffff;
+   width: 400px;
+   margin-top: 10px;
+   height: 40px;
+   font-size: 20px;
+  }
+  
+  .Login{
+    font-size: 20px;
+  }
+  .assigneeCircleWrapper{
+    background: #a674d0;
+    color: #fff;
+    line-height: 1;
+    padding: 17px;
+    width: 54px;
+    border-radius: 50%;
+    float: right;
+  }
+
+/***login********/
+
+  .Login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background:rgb(255, 255, 255);;
+    padding-bottom: 30px;
+    box-shadow: -1px -1px 10px 5px #75757526;
+    margin-left: 90px;
+    margin-right: 90px;
+
+   
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+  margin-top: 30px;
+  }
+  .text{
+    color:var(--blue) ;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .underline{
+    width: 61px;
+    height: 6px;
+    background-color: var(--blue);
+    border-radius: 9px;
+    text-align: center;
+    margin-left: 350px;
+    margin-top: 10px;
+  }
+  .inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+    height: 50px;
+    background: #cecece;
+    border-radius: 6px;
+  }
+  .icon{
+    color:#2a2185;
+    margin-left: 4px;
+  }
+  .input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #999;
+    font-size: 19px;
+  }
+ .forgot-password{
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #999;
+  font-size: 17px;
+  margin-right: 200px;
+ }
+ .forgot-password span {
+  color: #2a2185;
+  cursor: pointer;
+ }
+ .submit-container{
+  display: flex;
+  gap :30px;
+  margin:60px auto ;
+
+}
+.submit{
+  margin-top: -20px;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  width: 150px;
+  height: 59px;
+  color: #FFF;
+  background-color: var(--blue);
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.submit:hover{
+ background-color: #5f00ad;
+ color: white;
+}
+.gray{
+
+  background: #eaeaea;
+  color: gray;
+}
+
+
+
+
+.sidebar-projects {
+  margin-top: 30px;
+
+  background-color: var(--grey);
+  color: white;
+  padding: 20px;
+  border-radius: 17px;
+  box-shadow: -1px -1px 10px 5px #75757526;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+.sidebar-project h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.inputName{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputDescription{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputDate{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+
+.new-project-button{
+  background-color: #fff;
+  color:rgb(125, 85, 174);
+  border: 2px solid var(--blue);
+  border-radius: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px;
+}
+
+.new-project-button:hover {
+  background-color:rgb(93, 19, 204);
+  color: #fff;
+}
+.create-button{
+  background-color: rgb(125, 85, 174);
+  color: #FFF;
+  border: 2px solid var(--blue);
+  border-radius: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px;
+}
+.create-button:hover {
+  background-color:rgb(93, 19, 204);
+  color: #fff;
+}
+.cancel-button{
+  background-color: #fff;
+  color:rgb(125, 85, 174);
+  border: 2px solid var(--blue);
+  border-radius: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px;
+}
+.cancel-button:hover {
+  background-color:rgb(93, 19, 204);
+  color: #fff;
+}
+
+.delete-button{
+  background-color: #fff;
+  color:rgb(125, 85, 174);
+  border: 2px solid var(--blue);
+  border-radius: 50px;
+
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 10px;
+}
+
+.delete-button:hover {
+  background-color:rgb(93, 19, 204);
+  color: #fff;
+}
+.edit-button{
+  background-color: #fff;
+  color:rgb(125, 85, 174);
+  border: 2px solid var(--blue);
+  border-radius: 50px;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 10px;
+}
+.edit-button:hover {
+  background-color:rgb(93, 19, 204);
+  color: #fff;
+}
+.project-list {
+  list-style: none;
+  padding: 20px;
+  margin: 20px 0;
+  color: #222;
+  text-align: left;
+}
+
+.project-list-item {
+  margin-bottom: 10px;
+}
+
+.project-list-item a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.project-list-item a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+.sidebar-tasks {
+  margin-top: 30px;
+
+  background-color: var(--grey);
+  color: white;
+  padding: 20px;
+  border-radius: 17px;
+  box-shadow: -1px -1px 10px 5px #75757526;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.sidebar-task h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.inputName {
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+
+.inputDescription {
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputStatus{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputDate {
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputProjectName{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+.inputAssignee{
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+}
+
+.new-task-button {
+  background-color: #fff;
+  color: rgb(125, 85, 174);
+  border: 2px solid var(--blue);
+  border-radius: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px;
+}
+
+.new-task-button:hover {
+  background-color: rgb(93, 19, 204);
+  color: #fff;
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 20px;
+  margin: 20px 0;
+  color: #222;
+  text-align: left;
+}
+
+.task-list-item {
+  margin-bottom: 10px;
+}
+
+.task-list-item a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.task-list-item a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.messenger{
+  margin-top: 30px;
+
+  background-color: var(--grey);
+  color: white;
+  padding: 20px;
+  border-radius: 17px;
+  box-shadow: -1px -1px 10px 5px #75757526;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.message-list{
+  color: #222;
+}
+
+/***Board********/
+
+.kanban-board{
+  display: flex;
+  box-shadow: -1px -1px 10px 5px #75757526;
+  margin-top: 30px;
+  border-radius: 15px;
+  
+}
+.board h4{
+  text-decoration: dashed;
+  font-size: 30px;
+  margin: 15px;
+}
+.kanban-board h3{
+  color: rgb(40, 39, 39);
+  text-align: left;
+  margin: 10px;
+}
+.kanban-board h4{
+  color: rgb(40, 39, 39);
+  text-align: center;
+  margin: 10px;
+}
+.column {
+  width: 60%;
+  margin: 25px;
+  background-color:#DCDCDC;
+  text-align: left;
+  border-radius: 10px;
+  height: 0%;
+  box-shadow: -1px -1px 10px 5px #75757526;
+  padding: 15px;
+  border: solid;
+
+}
+.tasks{
+ border-radius: 10px;
+ background-color: #f5f5f5; 
+ padding: 15px;
+ margin: 10px;
+ cursor: pointer;
+ border: solid;
+ 
+}
+.tasks:hover{
+  background-color: #999;
+  color: #222;
+}
+
+.dash{
+  box-shadow: -1px -1px 10px 5px #75757526;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.taskprojectLi{
+  box-shadow: -1px -1px 10px 5px #75757526;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+}
+.taskprojectLi:hover{
+  background-color: #E0E0E0;
+}
+.taskprojectUl{
+  padding: 0;
+  margin: 0;
+}
+.text-taskprojectLi{
+width: 80%;
+}
+.boutton-taskprojectLi{
+
+}
